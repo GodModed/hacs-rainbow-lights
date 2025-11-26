@@ -15,6 +15,7 @@ class MySwitch(SwitchEntity):
     def turn_on(self, **kwargs):
         """Turn the switch on."""
         self._is_on = True
+        print("Switch turned on")
 
     def turn_off(self, **kwargs):
         """Turn the switch off."""
