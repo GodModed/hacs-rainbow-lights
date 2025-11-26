@@ -1,0 +1,9 @@
+{
+    "domain": "rainbow_lights",
+    "documentation": "https://github.com/godmoded/hacs-rainbow-lights",
+    "issue_tracker": "https://github.com/godmoded/hacs-rainbow-lights/issues",
+    "codeowners": ["@godmoded"],
+    "name": "Rainbow Lights",
+    "version": "0.0.1",
+    "iot_class": "assumed_state"
+}
