@@ -1,0 +1,1 @@
+DOMAIN = "rainbow_lights"
