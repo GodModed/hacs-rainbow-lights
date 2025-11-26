@@ -3,6 +3,7 @@ from homeassistant.components.switch import SwitchEntity
 class MySwitch(SwitchEntity):
     _attr_has_entity_name = True
     _attr_name = "Rainbow Lights"  # <-- add a friendly name
+    _attr_unique_id = "rainbow_lights_switch_001"
 
     def __init__(self):
         self._is_on = False
