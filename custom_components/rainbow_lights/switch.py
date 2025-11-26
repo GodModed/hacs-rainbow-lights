@@ -15,8 +15,21 @@ class MySwitch(SwitchEntity):
     def turn_on(self, **kwargs):
         """Turn the switch on."""
         self._is_on = True
-        print("Switch turned on")
+        # Notify Home Assistant of state change
+        self.schedule_update_ha_state()
 
     def turn_off(self, **kwargs):
         """Turn the switch off."""
         self._is_on = False
+        # Notify Home Assistant of state change
+        self.schedule_update_ha_state()
+
+
+async def async_setup_entry(hass, entry, async_add_entities):
+    """Set up switches from a config entry."""
+    async_add_entities([MySwitch()])
+
+
+def setup_platform(hass, config, add_entities, discovery_info=None):
+    """Set up switches from YAML/platform configuration (legacy)."""
+    add_entities([MySwitch()])
